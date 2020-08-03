@@ -45,6 +45,12 @@ body{
     height: 35px;
 }
 
+.text-box{
+    position: absolute; /* best way to centralized the text*/
+    top: 50%;
+    left: 50%;
+}
+
 .heading-primary{
     color:#FFF;
     text-transform: uppercase;
