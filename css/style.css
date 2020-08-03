@@ -45,6 +45,10 @@ body{
     height: 35px;
 }
 
+.logo:hover{
+    animation: moveInRight 1s ease-out;
+}
+
 .text-box{
     position: absolute; /* best way to centralized the text*/
     /*top and left are related to parent element*/
@@ -104,9 +108,9 @@ body{
         transform: translateX(-100px); /*we want text animate move in x direction, from left to right*/
     }
 
-    60%{
+    /* 60%{
         transform: rotate(180deg);
-    }
+    } */
 
     80%{/*one step in the middle of animation*/
         transform: translateX(10px);/*we want the test go a bit to right and back to 0 again*/
