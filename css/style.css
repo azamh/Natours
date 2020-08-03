@@ -151,3 +151,18 @@ body{
     background-color: #fff;
     color: #777;
 }
+
+/*
+The ::after pseudo-element can be used to insert some content after the content of an element.
+*/
+.btn::after {
+    content: "";/*content is always necessary, it could be empty*/
+    display: inline-block;/*should be same as btn, both are inline-block*/
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;/*should be same as btn, both are 100px*/
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
