@@ -131,6 +131,10 @@ body{
     text-decoration: none;
     padding: 15px 40px;
     display: inline-block;
+    border-radius: 100px;
+    /*now in visited condition*/
+    /*all property will be able to animated*/
+    transition: all .2s;/*short way to define animation without using @keyframes*/
 }
 
 .btn:hover {
