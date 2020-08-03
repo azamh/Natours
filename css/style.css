@@ -72,3 +72,19 @@ body{
     font-weight: 4700;
     letter-spacing: 17.4px;
 }
+
+@keyframes moveInLeft{
+    0%{ /*when animation start*/
+        opacity: 0; /*we want it be hidden*/
+        transform: translateX(-100); /*we want text animate move in x direction, from left to right*/
+    }
+
+    80%{/*one step in the middle*/
+        
+    }
+
+    100%{/*when animation end*/
+        opacity: 1;
+        transform: translate(0); /*w want to stay in the middle, where it is already*/
+    }
+}
