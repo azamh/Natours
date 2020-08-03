@@ -45,9 +45,9 @@ body{
     height: 35px;
 }
 
-.logo:hover{
+/* .logo:hover {
     animation: moveInRight 1s ease-out;
-}
+} */
 
 .text-box{
     position: absolute; /* best way to centralized the text*/
@@ -120,4 +120,17 @@ body{
         opacity: 1;
         transform: translate(0); /*we want to stay in the middle, where it is already*/
     }
+}
+
+.btn:link,
+.btn:visited {/*sudo class, help to style element, in special condition*/
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777;
 }
