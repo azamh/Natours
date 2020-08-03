@@ -166,6 +166,7 @@ The ::after pseudo-element can be used to insert some content after the content 
     top: 0;
     left: 0;
     z-index: -1;/*define the position of element, -1 means definitely behind the btn*/
+    transition: all .4s;
 }
 
 .btn-white::after {
@@ -174,4 +175,5 @@ The ::after pseudo-element can be used to insert some content after the content 
 
 .btn:hover::after {
     transform: scale(1.5);
+    opacity: 0;
 }
