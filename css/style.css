@@ -171,3 +171,7 @@ The ::after pseudo-element can be used to insert some content after the content 
 .btn-white::after {
     background-color: #fff;
 }
+
+.btn:hover::after {
+    transform: scale(1.5);
+}
