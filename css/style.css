@@ -136,6 +136,7 @@ body{
     /*now in visited condition*/
     /*all property will be able to animated*/
     transition: all .2s;/*short way to define animation without using @keyframes*/
+    position: relative;
 }
 
 .btn:hover {
@@ -161,6 +162,10 @@ The ::after pseudo-element can be used to insert some content after the content 
     height: 100%;
     width: 100%;
     border-radius: 100px;/*should be same as btn, both are 100px*/
+    position: absolute;/*reference is btn*/
+    top: 0;
+    left: 0;
+    z-index: -1;/*define the position of element, -1 means definitely behind the btn*/
 }
 
 .btn-white::after {
