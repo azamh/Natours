@@ -64,6 +64,13 @@ body{
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation-name:  moveInLeft;
+    animation-duration: 1s;
+    /*
+    animation-delay: 3s; /*waiting before start
+    animation-iteration-count: 3;/*happen 3 times
+    animation-timing-function: ease-out;/*start faster beginning and slower at end
+    */
 }
 
 .heading-primary-sub{
@@ -76,15 +83,15 @@ body{
 @keyframes moveInLeft{
     0%{ /*when animation start*/
         opacity: 0; /*we want it be hidden*/
-        transform: translateX(-100); /*we want text animate move in x direction, from left to right*/
+        transform: translateX(-100px); /*we want text animate move in x direction, from left to right*/
     }
 
-    80%{/*one step in the middle*/
-        
+    80%{/*one step in the middle of animation*/
+        transform: translateX(10px);/*we want the test go a bit to right and back to 0 again*/
     }
 
     100%{/*when animation end*/
         opacity: 1;
-        transform: translate(0); /*w want to stay in the middle, where it is already*/
+        transform: translate(0); /*we want to stay in the middle, where it is already*/
     }
 }
