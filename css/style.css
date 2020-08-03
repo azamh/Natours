@@ -47,8 +47,11 @@ body{
 
 .text-box{
     position: absolute; /* best way to centralized the text*/
-    top: 50%;
+    /*top and left are related to parent element*/
+    top: 40%;
     left: 50%;
+    /*transform is related to element itself*/
+    transform: translate(-50%, -50%);/*shift the box to the middle of header exactly*/
 }
 
 .heading-primary{
