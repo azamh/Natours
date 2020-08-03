@@ -8,9 +8,9 @@ Dark green: #28b485
 */
 
 /*universal selector*/
-* {
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,7 +18,7 @@ body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.7px;
+    line-height: 1.7;
     color: #777;
     padding: 30px;
 }
@@ -31,7 +31,7 @@ body{
         url(../img/hero.jpg);
     background-size: cover; /*always fit element in box*/
     background-position: top; /*always top of image stay at top of box when we change the image size*/
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /* <https://bennettfeely.com/clippy */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* <https://bennettfeely.com/clippy */
     position: relative;
 }
 
@@ -43,4 +43,23 @@ body{
 
 .logo{
     height: 35px;
+}
+
+.heading-primary{
+    color:#FFF;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 4700;
+    letter-spacing: 17.4px;
 }
