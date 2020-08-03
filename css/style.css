@@ -125,6 +125,7 @@ body{
     }
 }
 
+/*link and visited are both initial state of a link*/
 .btn:link,
 .btn:visited {/*sudo class, help to style element, in special condition*/
     text-transform: uppercase;
@@ -139,6 +140,7 @@ body{
 
 .btn:hover {
     transform: translateY(-3px);/*it goes up with hover*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
