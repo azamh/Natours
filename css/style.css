@@ -57,6 +57,7 @@ body{
 .heading-primary{
     color:#FFF;
     text-transform: uppercase;
+    backface-visibility: hidden;/*back of the element will hidden and will fix animate shaking*/
 }
 
 .heading-primary-main{
