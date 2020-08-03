@@ -133,6 +133,14 @@ body{
     display: inline-block;
 }
 
+.btn:hover {
+    transform: translateY(-3px);/*it goes up with hover*/
+}
+
+.btn:active {
+    transform: translateY(-1px);/*move to only 1 px up by one click*/
+}
+
 .btn-white{
     background-color: #fff;
     color: #777;
