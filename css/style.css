@@ -56,12 +56,15 @@ body{
     left: 50%;
     /*transform is related to element itself*/
     transform: translate(-50%, -50%);/*shift the box to the middle of header exactly*/
+    text-align: center;
+
 }
 
 .heading-primary{
     color:#FFF;
     text-transform: uppercase;
     backface-visibility: hidden;/*back of the element will hidden and will fix animate shaking*/
+    margin: 60px;
 }
 
 .heading-primary-main{
