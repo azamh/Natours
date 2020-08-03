@@ -125,6 +125,18 @@ body{
     }
 }
 
+@keyframes moveInBottom{
+    0%{ /*when animation start*/
+        opacity: 0; /*we want it be hidden*/
+        transform: translateY(30px); /*we want text animate move in x direction, from left to right*/
+    }
+
+    100%{/*when animation end*/
+        opacity: 1;
+        transform: translate(0); /*we want to stay in the middle, where it is already*/
+    }
+}
+
 /*link and visited are both initial state of a link*/
 .btn:link,
 .btn:visited {/*sudo class, help to style element, in special condition*/
@@ -176,4 +188,9 @@ The ::after pseudo-element can be used to insert some content after the content 
 .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.5);
     opacity: 0;
+}
+
+.btn-animated{
+    animation: moveInBottom .5s ease-out;
+    animation-fill-mode: backwards;/*apply animation style to 0% before start*/
 }
