@@ -78,6 +78,23 @@ body{
     font-size: 20px;
     font-weight: 4700;
     letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInRight{
+    0%{ /*when animation start*/
+        opacity: 0; /*we want it be hidden*/
+        transform: translateX(100px); /*we want text animate move in x direction, from left to right*/
+    }
+
+    80%{/*one step in the middle of animation*/
+        transform: translateX(-10px);/*we want the test go a bit to right and back to 0 again*/
+    }
+
+    100%{/*when animation end*/
+        opacity: 1;
+        transform: translate(0); /*we want to stay in the middle, where it is already*/
+    }
 }
 
 @keyframes moveInLeft{
