@@ -31,4 +31,5 @@ body{
         url(../img/hero.jpg);
     background-size: cover; /*always fit element in box*/
     background-position: top; /*always top of image stay at top of box when we change the image size*/
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); /* <https://bennettfeely.com/clippy */
 }
