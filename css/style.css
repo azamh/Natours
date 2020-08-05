@@ -8,19 +8,28 @@ Dark green: #28b485
 */
 
 /*universal selector*/
-*{
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+html{
+    /*font-size: 10px;/*root font size should be in html*/
+    /*we want to stick to the browser font size, then 10 px will fix the size and it is not good for all type of users*/
+    font-size: 62.5%;/*default size is 16px, and 10px is 65.5% of the default font size*/
 }
 
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /* font-size: 16px; */
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header{
@@ -37,12 +46,12 @@ body{
 
 .logo-box{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo{
-    height: 35px;
+    height: 3.5rem;
 }
 
 /* .logo:hover {
@@ -64,14 +73,14 @@ body{
     color:#FFF;
     text-transform: uppercase;
     backface-visibility: hidden;/*back of the element will hidden and will fix animate shaking*/
-    margin: 60px;
+    margin: 6rem;
 }
 
 .heading-primary-main{
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name:  moveInLeft;
     animation-duration: 1s;
     /*
@@ -83,20 +92,20 @@ body{
 
 .heading-primary-sub{
     display: block;
-    font-size: 20px;
-    font-weight: 4700;
-    letter-spacing: 17.4px;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
 }
 
 @keyframes moveInRight{
     0%{ /*when animation start*/
         opacity: 0; /*we want it be hidden*/
-        transform: translateX(100px); /*we want text animate move in x direction, from left to right*/
+        transform: translateX(10rem); /*we want text animate move in x direction, from left to right*/
     }
 
     80%{/*one step in the middle of animation*/
-        transform: translateX(-10px);/*we want the test go a bit to right and back to 0 again*/
+        transform: translateX(-1rem);/*we want the test go a bit to right and back to 0 again*/
     }
 
     100%{/*when animation end*/
@@ -108,7 +117,7 @@ body{
 @keyframes moveInLeft{
     0%{ /*when animation start*/
         opacity: 0; /*we want it be hidden*/
-        transform: translateX(-100px); /*we want text animate move in x direction, from left to right*/
+        transform: translateX(-10rem); /*we want text animate move in x direction, from left to right*/
     }
 
     /* 60%{
@@ -116,7 +125,7 @@ body{
     } */
 
     80%{/*one step in the middle of animation*/
-        transform: translateX(10px);/*we want the test go a bit to right and back to 0 again*/
+        transform: translateX(1rem);/*we want the test go a bit to right and back to 0 again*/
     }
 
     100%{/*when animation end*/
@@ -128,7 +137,7 @@ body{
 @keyframes moveInBottom{
     0%{ /*when animation start*/
         opacity: 0; /*we want it be hidden*/
-        transform: translateY(30px); /*we want text animate move in x direction, from left to right*/
+        transform: translateY(3rem); /*we want text animate move in x direction, from left to right*/
     }
 
     100%{/*when animation end*/
@@ -142,18 +151,19 @@ body{
 .btn:visited {/*sudo class, help to style element, in special condition*/
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     /*now in visited condition*/
     /*all property will be able to animated*/
     transition: all .2s;/*short way to define animation without using @keyframes*/
     position: relative;
+    font-size: 1.6rem;
 }
 
 .btn:hover {
     transform: translateY(-3px);/*it goes up with hover*/
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
@@ -173,7 +183,7 @@ The ::after pseudo-element can be used to insert some content after the content 
     display: inline-block;/*should be same as btn, both are inline-block*/
     height: 100%;
     width: 100%;
-    border-radius: 100px;/*should be same as btn, both are 100px*/
+    border-radius: 10rem;/*should be same as btn, both are 100px*/
     position: absolute;/*reference is btn*/
     top: 0;
     left: 0;
